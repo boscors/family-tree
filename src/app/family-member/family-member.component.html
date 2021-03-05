@@ -1,0 +1,22 @@
+<div class="family-member">
+    <svg viewBox="0 0 150 150" fill="rgb(247,247,247)" >
+       <use xlink:href="#svg-defs"/>
+       <title>{{member.name}} {{member.surname1}} {{member.surname2}} ({{member.birthdate}} - {{member.deathdate}})</title>
+       <line x1="75" y1="0" x2="75" y2="25" style="stroke:rgb(0,0,0);stroke-width:2" />
+       <rect x="75" y="20" width="75" height="20" fill="rgb(124 206 239)"/> 
+       <rect x="75" y="45" width="75" height="20" fill="rgb(62 185 236)"/> 
+       <rect x="75" y="70" width="75" height="20" fill="rgb(0,164,232)" /> 
+       <text class="family-brunch" fill="rgb(0,164,232)">
+          <textPath xlink:href="#circlePath-1">{{member.surname1}}</textPath>
+       </text>
+       <circle fill="rgb(247,247,247)" stroke="rgb(0,164,232)" cx="75" cy="75" r="55" stroke-width="9"></circle>
+       <circle fill="url('#gradientColor1')" cx="75" cy="75" r="44"  filter="url(#shadow)"></circle>
+       <image x="43" y="43"  width="65" class="portrait" xlink:href="assets/img/bosco.jpg" filter="url(#grayscale)" clip-path="url(#circlePath-3)" alt="Juan Bosco Rey-Stolle Saavedra (1979)"/>
+       <text class="name">
+          <textPath xlink:href="#circlePath-2" fill="rgb(62,62,62)">{{member.name}} {{member.surname1}} {{member.surname2}} ({{member.birthdate}} - {{member.deathdate}})</textPath>
+       </text>        	  
+    </svg>
+    <button id="bio" style="background-color: rgb(124 206 239)">Biografía</button>
+    <button id="contact" style="background-color: rgb(62 185 236)">Contacto</button>
+    <button id="offspring" style="background-color: rgb(0,164,232)">Familia</button>
+</div>

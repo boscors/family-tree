@@ -1,0 +1,20 @@
+<div class="family-container">
+    <div class="family-ascendant-container">
+        <div class="centered-container">
+            <div class="family-ascendant">
+                <app-family-member [member]="selectedFamilyMember"></app-family-member>
+            </div>
+            <div *ngIf="selectedFamilyMember.couple" class="family-ascendant-couple">
+                <ul class="centered-container">
+                    <li *ngFor="let couple of selectedFamilyMemberCouples(selectedFamilyMember.familyCode)"><app-family-member [member]="familyTree[couple]"></app-family-member></li>                                                            
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="selectedFamilyMember.offspring > 0" class="family-descendants-container">
+        <ul class="centered-container">
+            <li *ngFor="let familyDescendant of familyOffspring(selectedFamilyMember.familyCode)"><app-family-member [member]="familyTree[familyDescendant]"></app-family-member></li>                                                            
+        </ul>
+    </div>
+    
+</div>
